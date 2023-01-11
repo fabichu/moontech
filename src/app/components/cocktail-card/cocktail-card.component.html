@@ -1,0 +1,16 @@
+<div class="cocktailCard">
+  <div class="imagen">
+    <img src="{{ cocktail.strDrinkThumb }}/preview" alt="" />
+  </div>
+  <div class="info">
+    <h2>{{ cocktail.strDrink }}</h2>
+  </div>
+  <div class="detalles">
+    <button
+      routerLink="/detalles/{{ cocktail.idDrink }}"
+      routerLinkActive="active"
+    >
+      Ver detalles
+    </button>
+  </div>
+</div>

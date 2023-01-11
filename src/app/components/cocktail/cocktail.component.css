@@ -1,0 +1,23 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+}
+.busqueda {
+  display: flex;
+  flex-direction: row;
+  gap: 3em;
+  justify-content: center;
+  align-items: center;
+}
+
+.resultados {
+  width: 100%;
+  display: grid;
+  gap: 2rem;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+}

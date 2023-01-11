@@ -1,0 +1,23 @@
+<h1>Cocktails</h1>
+
+<section class="busqueda">
+  <div class="filtros">
+    <select #filtro id="filtros">
+      <option *ngFor="let filtro of filtros" value="{{ filtro.value }}">
+        {{ filtro.name }}
+      </option>
+    </select>
+  </div>
+  <div class="nombre">
+    <input #nombre type="text" />
+  </div>
+  <div class="submit">
+    <button (click)="search(nombre.value, filtro.value)">Buscar</button>
+  </div>
+</section>
+<section class="resultados">
+  <app-cocktail-card
+    *ngFor="let cocktail of cocktails$"
+    [cocktail]="cocktail"
+  ></app-cocktail-card>	
+</section>
